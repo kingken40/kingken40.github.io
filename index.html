@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth Okwunwanne</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0890bc2d9e.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "OfsXcLYxLzWkk-hFj",
+        });
+    })();
+    </script>
+</head>
+<body>
+
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <!-- <span class="shape shape--wave">∿∿∿</span> -->
+        <span class="shape shape--circle shape--circle-1"></span>
+        <span class="shape shape--triangle"></span>
+        <span class="shape shape--circle shape--circle-2"></span>
+        <nav>
+            <figure>
+                <img id="personal_logo" src="./assets/logo.svg" alt="">
+            </figure>
+            <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black
+                    "><i class="fa-solid fa-circle-half-stroke"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header class = "header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title orange">I'm Kenneth.</h1>
+                <p class="header__para">
+                    I'm a <strong class="orange">Software Engineer</strong> with a strong passion for building web
+                    applications with great user experiences.
+                    <br>
+                    Here's a bit more <a class="orange click" onclick="toggleModal()"><b>about me.</b></a>
+                </p>
+                <div class="social__list">
+                    <!-- <a href="https://google.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social__link click">
+                        <i class="fa-brands fa-google"></i> 
+                    </a>-->
+                    <a href="https://www.linkedin.com/in/ken-okwun/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social__link click"> <!-- Put link to linkedin in href -->
+                        <i class="fa-brands fa-linkedin-in"></i> 
+                    </a>
+                    <a href="https://github.com/kingken40" title="GitHub" class="social__link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="./assets/Kenneth-Okwu-Software Engineer.pdf" title="Resume" download="Kenneth-Okwu-Software Engineer.pdf" rel="noopener noreferrer" class="social__link">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <button class="mail__btn click" onclick ="toggleModal()"type="button" aria-label="Open modal">
+            <i class="fa-solid fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal__overlay"></div>
+        <div class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal__exit click" type="button" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal__half modal__about">
+                <h3 class="modal__title" id="modal-title">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title"><b class="orange">Frontend Software Engineer</b>.</h4>
+                <p>I'm a 28 year old Software Engineer with a strong passion for building web applications with great user experiences.</p>
+                <!-- <p class="modal__para">
+                    I'm a 27 year old <b class="orange">Software Engineer</b> with a strong passion for building web applications with great user experiences. 
+                    <br>
+                    I have experience working with a variety of technologies, including <b class="orange">HTML, CSS, JavaScript, React, Python, Java, and MySQL</b>. I'm always trying to learn new technologies and take on new challenges.
+                </p> -->
+                <div class="modal__languages">
+                    <!-- Put the images of the languages -->
+                    <figure class="modal__language">
+                        <img src="./assets/html.svg" alt="HTML" class="modal__language--img">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="./assets/css.svg" alt="CSS" class="modal__language--img">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="./assets/javascript.svg" alt="JavaScript" class="modal__language--img">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="./assets/react.svg" alt="React" class="modal__language--img">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <!-- <p class="modal__para">Feel free to reach out!!!</p> -->
+                <h3 class="modal__sub-title modal__sub-title--contact">
+                    I'm always open to new opportunities and collaborations.
+                </h3>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label" for="name">Name</label>
+                        <input class="input" name="user_name" type="text" ></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="email">Email</label>
+                        <input class="input" name="user_email" type="email"></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="message">Message</label>
+                        <textarea class="input" name="message" type="text"></textarea>
+                    </div>
+                   <button id="contact__submit" class="form__submit" type="submit">
+                    Send it my way
+                   </button> 
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking with you soon.
+                </div>
+            </div>
+        </div>
+        <!-- <div class="modal__half modal__contact">Lets have a chat.</div> -->
+        <img src="./assets/semi circle.svg" class="shape shape--0" alt="">
+        <img src="./assets/circle.svg" class="shape shape--1" alt="">
+        <img src="./assets/squiggle.svg" class="shape shape--2" alt="">
+        <img src="./assets/circle.svg" class="shape shape--3" alt="">
+        <img src="./assets/triangle.svg" class="shape shape--4" alt="">
+        <img src="./assets/circle.svg" class="shape shape--5" alt="">
+        <img src="./assets/squiggle.svg" class="shape shape--6" alt="">
+        <img src="./assets/circle.svg" class="shape shape--7" alt="">
+        <img src="./assets/semi circle.svg" class="shape shape--8" alt="">
+
+        <!-- <img src="./assets/semi circle.jpg" class="shape shape--0" alt=""> <!-- change .svg to .jpeg, same as in the downloads, or find the right .svg files -->
+        <!-- <img src="./assets/circle.jpg" class="shape shape--1" alt="">
+        <img src="./assets/squiggly.jpg" class="shape shape--2" alt="">
+        <img src="./assets/circle.jpg" class="shape shape--3" alt="">
+        <img src="./assets/triangle.jpg" class="shape shape--4" alt="">
+        <img src="./assets/circle.jpg" class="shape shape--5" alt="">
+        <img src="./assets/squiggly.jpg" class="shape shape--6" alt="">
+        <img src="./assets/circle.jpg" class="shape shape--7" alt="">
+        <img src="./assets/semi circle.jpg" class="shape shape--8" alt=""> -->
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="orange">projects</span>
+                </h1>
+                <ul class="project__list">
+
+                    <!-- Project 1 WF -->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/WF.png" alt="Weather Forecaster project preview" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Weather Forecaster</h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, React, JavaScript, Python
+                                </h4>
+                                <p class="project__description--para">
+                                    A simple interactive tool that shows real-time weather info 
+                                    for any U.S. city. Enter a city and state to see its current 
+                                    temperature and conditions!
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/kingken40/WeatherForecast" class="project__description--link click">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://weather-forecast-ken.vercel.app/" class="project__description--link click">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Project 2 RG -->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/RG.png" alt="Rubric Generator project preview" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Rubric Generator</h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    An AI-powered tool designed to help educators create 
+                                    comprehensive assignment rubrics quickly and efficiently. 
+                                    Customize criteria, scoring, and feedback for any educational 
+                                    level.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/kingken40/website/tree/main/RealityAI_Rubric_Generator" class="project__description--link click">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://website-zg7c.vercel.app/RealityAI_Rubric_Generator/public/rubric_gen_p1.html" class="project__description--link click">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Project 3 LP-->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/LPG.png" alt="Lesson Planner project preview" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Lesson Planner</h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    A comprehensive lesson planning tool that helps educators create 
+                                    well-structured, engaging lesson plans for any subject or grade 
+                                    level. Features customizable templates, standards alignment, and 
+                                    activity suggestions.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/kingken40/website/tree/main/lesson_plan_generator" class="project__description--link click">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://website-zg7c.vercel.app/lesson_plan_generator/public/lesson_planner_p1.html" class="project__description--link click">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Project 4 PG -->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <!-- Presentation Generater image -->
+                            <img src="./assets/PG.png" alt="Presentation project preview" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Presentation Generator</h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    Create engaging, structured presentations for any educational topic! 
+                                    Generate complete slide presentations with customizable content, 
+                                    learning objectives, and educational activities tailored to specific 
+                                    grade levels.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/kingken40/website/tree/main/presentation_generator" class="project__description--link click">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://website-zg7c.vercel.app/presentation_generator/public/pg_p1.html" class="project__description--link click">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Project 5 SAIC -->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <!-- Simple AI Chatbot image -->
+                            <img src="./assets/SAIC.png" alt=" project preview" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Simple AI Chatbot</h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript, Python
+                                </h4>
+                                <p class="project__description--para">
+                                    A simple AI assistant to chat with. Type a short message (up 
+                                    to 50 characters) and get quick replies.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="https://github.com/kingken40/website/tree/main/ai/ai1" class="project__description--link click">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://website-zg7c.vercel.app/ai/ai1/public/ai.html" class="project__description--link click">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <img class="footer__logo--img" src="./assets/logo.svg" alt="">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://www.linkedin.com/in/ken-okwun/" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/kingken40" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        GitHub
+                    </a><a href="#" onclick="toggleModal()" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        Email
+                    </a>
+                    <a href="./assets/Kenneth-Okwu-Software Engineer.pdf" download="Kenneth-Okwu-Software Engineer.pdf" rel="noopener noreferrer" class="
+                        footer__social--link
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        Resume
+                    </a>
+                </div>
+                <div class="footer__copyright">Copyright 2026 Kenneth Okwunwanne</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
